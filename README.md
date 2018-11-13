@@ -45,6 +45,13 @@ Method 1, Examples :
   
 	Example Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
 	
+Method 2, Examples :
+	
+	example Step1 (system A): tcpdump -XX -v broadcast | grep 0x0000
+	
+	example Step2 (system B): ./NativePayload_ARP2.sh -send mytest.txt vlan1 192.168.160.1/24 192.168.160.255 -p 192.168.160.2 eth0
+	
+	
 	
   # Method 1 Pictures : Using NativePayload_ARP2.sh both Sides
   
