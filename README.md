@@ -4,19 +4,30 @@
 
 # NativePayload_ARP2.sh help :
 
+# Method 1: Using NativePayload_ARP2.sh both Sides
+
 	Example Step1: (System A ) ./NativePayload_ARP2.sh -listen (Packet Number)
   
 	Example Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
+	
+# Method 2: Using NativePayload_ARP2.sh (system B) , tcpdump -XX -v broadcast | grep 0x0000 (system A)
+
+	Example Step1: (System A ) tcpdump -XX -v broadcast | grep 0x0000
   
-  example Step1 (System A1 ) IPv4:192.168.56.101 : ./NativePayload_ARP2.sh -listen 72
+	Example Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
+	
+
+  Method 1: Using NativePayload_ARP2.sh both Sides
   
-  example Step1 (System A2 ) IPv4:192.168.56.102 : ./NativePayload_ARP2.sh -listen 72
+  	example Step1 (System A1 ) IPv4:192.168.56.101 : ./NativePayload_ARP2.sh -listen 72
   
-  example  Step2 (System B ) IPv4:192.168.56.1 : ./NativePayload_ARP2.sh -send Test.txt vlan3 192.168.222.1/24 192.168.222.255 -p 192.168.222.2 vboxnet0
+  	example Step1 (System A2 ) IPv4:192.168.56.102 : ./NativePayload_ARP2.sh -listen 72
   
-  Description: with Step1 this script will get packets from (system B) , with Step2 you will send textfile.txt to all systems in (LAN) via ARP Broadcast Traffic by "Vid Tag".
+  	example  Step2 (System B ) IPv4:192.168.56.1 : ./NativePayload_ARP2.sh -send Test.txt vlan3 192.168.222.1/24 192.168.222.255 -p 192.168.222.2 vboxnet0
   
-  Note: (System B) is "VM host or Physical Machine" and (System A1/A2) are "Virtual Machine"
+  	Description: with Step1 this script will get packets from (system B) , with Step2 you will send textfile.txt to all systems in (LAN) via ARP Broadcast Traffic by "Vid Tag".
+  
+  	Note: (System B) is "VM host or Physical Machine" and (System A1/A2) are "Virtual Machine"
   
   
   	Important Point about "switch -listen (Packet Number)" : 
