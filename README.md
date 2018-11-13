@@ -7,9 +7,9 @@ Video (step by step) : https://www.youtube.com/watch?v=C4fB7NQJHO4
 
 # Method 1: Using NativePayload_ARP2.sh both Sides
 
-	Example Step1: (System A ) ./NativePayload_ARP2.sh -listen (Packet Number)
+	Step1: (System A ) ./NativePayload_ARP2.sh -listen (Packet Number)
   
-	Example Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
+	Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
 	
 Method 1, Examples :
   
@@ -44,9 +44,9 @@ Method 1, Examples :
 	
 # Method 2: Using NativePayload_ARP2.sh (system B) , tcpdump -XX -v broadcast | grep 0x0000 (system A)
 
-	Example Step1: (System A ) tcpdump -XX -v broadcast | grep 0x0000
+	Step1: (System A ) tcpdump -XX -v broadcast | grep 0x0000
   
-	Example Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
+	Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
 	
 Method 2, Examples :
 	
