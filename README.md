@@ -16,7 +16,7 @@
   
   Description: with Step1 this script will get packets from (system B) , with Step2 you will send textfile.txt to all systems in (LAN) via ARP Broadcast Traffic by "Vid Tag".
   
-  Note: (System B) is "VM host or Physical system" and (Sytem A1/A2) are "Virtual systems"
+  Note: (System B) is "VM host or Physical Machine" and (System A1/A2) are "Virtual Machine"
   
 	
   
