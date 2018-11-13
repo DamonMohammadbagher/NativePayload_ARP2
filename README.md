@@ -10,17 +10,7 @@
   
 	Example Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
 	
-# Method 2: Using NativePayload_ARP2.sh (system B) , tcpdump -XX -v broadcast | grep 0x0000 (system A)
-
-	Example Step1: (System A ) tcpdump -XX -v broadcast | grep 0x0000
-  
-	Example Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
-	
-
- 
-  
-  
-  Method 1: Using NativePayload_ARP2.sh both Sides
+Method 1: Using NativePayload_ARP2.sh both Sides
   
   	example Step1 (System A1 ) IPv4:192.168.56.101 : ./NativePayload_ARP2.sh -listen 72
   
@@ -50,6 +40,13 @@
  		system A  , Step 1: ./NativePayload_ARP2.sh -listen 72
  
 		 system B , Step 2: ./NativePayload_ARP2.sh -send mytest.txt vlan1 192.168.160.1/24 192.168.160.255 -p 192.168.160.2 eth0
+	
+# Method 2: Using NativePayload_ARP2.sh (system B) , tcpdump -XX -v broadcast | grep 0x0000 (system A)
+
+	Example Step1: (System A ) tcpdump -XX -v broadcast | grep 0x0000
+  
+	Example Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
+	
 	
   # Method 1 Pictures : Using NativePayload_ARP2.sh both Sides
   
