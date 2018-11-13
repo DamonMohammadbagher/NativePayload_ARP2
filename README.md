@@ -2,6 +2,8 @@
 
 Simple Script "NativePayload_ARP2.sh" for Sending DATA via ARP Bcast Traffic to all systems in (LAN) by "Vid" tag
 
+Note : this Script Tested on Kali linux (only)
+
 Video (step by step) : https://www.youtube.com/watch?v=C4fB7NQJHO4
 
 
