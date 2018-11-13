@@ -1,8 +1,6 @@
-# NativePayload_ARP2
+# NativePayload_ARP2.sh
 
-
-
-# NativePayload_ARP2.sh help :
+DATA Sending via ARP Broadcast Traffic by "Vid tag" to all systems in (LAN) and using "NativePayload_ARP2.sh" script.
 
 # Method 1: Using NativePayload_ARP2.sh both Sides
 
