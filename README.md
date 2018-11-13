@@ -8,9 +8,9 @@
   
 	Example Step2: (System B ) ./NativePayload_ARP2.sh -send TextFile.txt [VlanName] [vlan-Subnet/mask] [vlan-Broadcast]  -p [vlan-PingIPv4] [(wlan0,eth0,vboxnet0,etc.)]
   
-  example Step1 (System A1 ) IPv4:192.168.56.101 : ./NativePayload_ARP2.sh -listen 176
+  example Step1 (System A1 ) IPv4:192.168.56.101 : ./NativePayload_ARP2.sh -listen 72
   
-  example Step1 (System A2 ) IPv4:192.168.56.102 : ./NativePayload_ARP2.sh -listen 176
+  example Step1 (System A2 ) IPv4:192.168.56.102 : ./NativePayload_ARP2.sh -listen 72
   
   example  Step2 (System B ) IPv4:192.168.56.1 : ./NativePayload_ARP2.sh -send Test.txt vlan3 192.168.222.1/24 192.168.222.255 -p 192.168.222.2 vboxnet0
   
@@ -21,7 +21,7 @@
   
   	Important Point about "switch -listen (Packet Number)" : 
   
-  	your "PacketNumber" will be TextFile.txt Length * 4 it means :
+  	your "PacketNumber" will be TextFile.txt Length * 2 it means :
   
   	for example this is our mytest.txt file :
   
@@ -31,17 +31,28 @@
 		0000014: 2042 726f 6164 6361 7374   Broadcast
 		000001e: 2026 2056 4944 0a          & VID.
  
- 	as you can see we have 36 Bytes so  (36 * 4 = 144) now your PacketNumber is 144
+ 	as you can see we have 36 Bytes so  (36 * 2 = 72) now your PacketNumber is 72
  
- 		system A  , Step 1: ./NativePayload_ARP2.sh -listen 144
+ 		system A  , Step 1: ./NativePayload_ARP2.sh -listen 72
  
 		 system B , Step 2: ./NativePayload_ARP2.sh -send mytest.txt vlan1 192.168.160.1/24 192.168.160.255 -p 192.168.160.2 eth0
 	
+  # Method 1 : Using NativePayload_ARP2.sh both Sides
   
-  ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/step1.png)
+  ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/Method1Step1.png)
+  Picture Method 1 , Step 1:
 
-  ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/step2.png)
+  ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/Method1Step2.png)
+    Picture Method 1 , Step 2:
 
-  ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/step3.png)
+  # Method 2 : Using NativePayload_ARP2.sh (system B) , Tcpdump -XX -v broadcast | grep 0x0000 (system A)
 
-  ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/final.png)
+  ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/Method2Step1.png)
+    Picture Method 2 , Step 1:
+
+  ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/Method2Step2.png)
+  Picture Method 2 , Step 2:
+  
+   ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/Method2Step3.png)
+   Picture Method 2 , Step 3:
+    
