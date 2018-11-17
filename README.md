@@ -6,6 +6,9 @@ Note : this Script Tested on Kali linux (only)
 
 Video (step by step) : https://www.youtube.com/watch?v=C4fB7NQJHO4
 
+Article link1 (PDF) : https://github.com/DamonMohammadbagher/NativePayload_ARP2/tree/master/Article
+
+Article link2 : https://www.peerlyst.com/posts/sending-data-via-arp-broadcast-traffic-to-all-systems-in-lan-by-vid-tag-damon-mohammadbagher
 
 # Method 1: Using NativePayload_ARP2.sh both Sides
 
