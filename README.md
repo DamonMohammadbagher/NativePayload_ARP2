@@ -80,3 +80,4 @@ Method 2, Examples :
    ![](https://github.com/DamonMohammadbagher/NativePayload_ARP2/blob/master/Pictures/Method2Step3.png)
    Picture Method 2 , Step 3:
     
+<p><a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/DamonMohammadbagher/NativePayload_ARP2/"/></a></p>
